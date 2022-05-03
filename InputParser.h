@@ -22,7 +22,7 @@ public:
     void setFilename(std::string newFile);
 
     // for now, read in every line from [filename] class member
-    void readFile();
+    bool readFile();
 };
 
 #endif

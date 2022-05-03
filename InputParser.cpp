@@ -11,6 +11,9 @@ void InputParser::setFilename(std::string newFile) {
 }
 
 // for now, read in every line from [filename] class member
-void InputParser::readFile() {
+// return: return true if file parse and print was successful
+//          false if failed or no [filename]
+bool InputParser::readFile() {
     // todo: implement method to read in each line of [filename] and print to cout
+    return false;
 }
