@@ -21,6 +21,9 @@ public:
     // setter to change the file name if need be. modifies filename class member
     void setFilename(std::string newFile);
 
+    // getter for the file name if need be. does not modify filename class member
+    std::string getFilename(std::string newFile);
+
     // for now, read in every line from [filename] class member
     bool readFile();
 };
