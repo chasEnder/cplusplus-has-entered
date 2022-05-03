@@ -3,6 +3,7 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Wallllllllllllllly!";
+    std::cout << "Chuck!";
     return 0;
 }
+
