@@ -3,7 +3,13 @@
 
 // two things to understand off the bat with c++:
 // 1. what the include is adding to the file
+//      Response: directive, interpreted by preprocessor, which includes standard C++ code,
+//      allows for input and output operations to be written to the screen
 // 2. what "using namespace std" does. we wont use it but some do
+//      Response: allows for some brevity in not having to use std::cout
+//      which allows us to use the 'unqualifed name'
+//      Question posed then: can you include multiple namespaces? I'm guessing not because then certain code
+//      might not know which namespace is being used, so there wouldn't be a 'qualified name'
 
 // Out file includes
 #include "InputParser.h"
