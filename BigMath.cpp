@@ -17,7 +17,10 @@
 int main(int argc, char** argv) {
     // points to understand:
         // where cout/cin go, what 'stream's are
+        //  Response: cout --> character output, output stream, what's printed I believe?
+        //            cin  --> character input, input stream, what user inputs?
         // << and \n characters for c++
+        //  Response: \n is to go to next line (kind of like return key)
     std::cout << "You've entered " << argc << "arguments" << std::endl;
     // alternate to "/n" is std::endl
 
