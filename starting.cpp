@@ -3,6 +3,6 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Hello World!";
+    std::cout << "Merge Conflicts to the max";
     return 0;
 }
