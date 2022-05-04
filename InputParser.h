@@ -1,10 +1,14 @@
 #ifndef INPUTPARSER_H
 #define INPUTPARSER_H
+//  Response: header guards, prevents redeclaration ... generally get this
 
 #include <iostream>
 #include <fstream>
+//  Response: to be able to read/write files?
 #include <string>
-// again try to udnerstand each included library
+//  Response: allows for use of string object type
+
+// again try to understand each included library
 
 class InputParser
 {
@@ -20,6 +24,9 @@ public:
 
     // setter to change the file name if need be. modifies filename class member
     void setFilename(std::string newFile);
+
+    // getter for the file name if need be. does not modify filename class member
+    std::string getFilename(std::string newFile);
 
     // for now, read in every line from [filename] class member
     bool readFile();
