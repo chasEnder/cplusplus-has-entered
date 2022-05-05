@@ -3,8 +3,8 @@
 // constructor to set filename of the class
 InputParser::InputParser(std::string fileName) {
     // todo: implement constructor
-    std::cout << "Please input name of file to be read: " << end1;
-    std::cin >> fileName
+    //std::cout << "Please input name of file to be read: " << end1;
+    //std::cin >> fileName;
 }
 
 // setter to change the file name if need be. modifies filename class member
