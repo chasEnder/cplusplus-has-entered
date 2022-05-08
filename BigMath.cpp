@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
         //            cin  --> character input, input stream, what user inputs?
         // << and \n characters for c++
         //  Response: \n is to go to next line (kind of like return key)
-    std::cout << "You've entered " << argc << "arguments" << std::endl;
+    std::cout << "You've entered " << argc << " arguments" << std::endl;
     // alternate to "/n" is std::endl
 
     for (int i = 0; i < argc; ++i) {
@@ -55,8 +55,13 @@ int main(int argc, char** argv) {
    }
 
    // 2. create an InputParser
-   std::cout << "Filename provided: " << argv[1] << std::endl;
+        // this is equal to doing:
+        // Input parser;
+        // parser = InputParser(argc[1]);
+        // try not to use it this way though bc it comes w/ complications regarding default constructors
    InputParser parser = InputParser(argv[1]);
+    // fundamentally the same thing as:
+    // int count = 1;
    
    // 3. evaluate file using input parser
    parser.readFile();
