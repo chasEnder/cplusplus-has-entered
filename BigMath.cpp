@@ -9,23 +9,6 @@
 #include "InputParser.h"
 
 int main(int argc, char** argv) {
-    // points to understand:
-        // where cout/cin go, what 'stream's are
-        // << and \n characters for c++
-    std::cout << "You've entered " << argc << "arguments" << std::endl;
-    // alternate to "/n" is std::endl
-
-    for (int i = 0; i < argc; ++i) {
-        std::cout << argv[i] << std::endl;
-    }
-
-    /*
-     above is for understanding
-     below will be for actual implementation
-
-     also notice the multi line comment :) some fun syntax
-    */
-
     /*
     How BigMath will operate for now:
         1. read in filename from the command line
@@ -39,18 +22,17 @@ int main(int argc, char** argv) {
         ./BigMath TestData.txt
     */
 
-   // 1. read in filename from the command line, error checking
-   if (argc != 2) {
-       // we have more or less data than we need, fail hard
-       return 1;
-   }
+    // 1. read in filename from the command line, error checking
+    if (argc != 2) {
+        // we have more or less data than we need, fail hard
+        return 1;
+    }
 
-   // 2. create an InputParser
-   std::cout << "Filename provided: " << argv[1] << std::endl;
-   InputParser parser = InputParser(argv[1]);
-   
-   // 3. evaluate file using input parser
-   parser.readFile();
+    // 2. create an InputParser
+    InputParser parser = InputParser(argv[1]);
+
+    // 3. evaluate file using input parser
+    parser.readFile();
 
     return 0;
     // ending main with a return for success
