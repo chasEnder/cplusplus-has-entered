@@ -8,8 +8,6 @@ InputParser::InputParser(std::string newFile) {
     
 }
 
-// difference between these two?
-
 // setter to change the file name if need be. modifies filename class member
 void InputParser::setFilename(std::string newFile) {
     // todo: implement setter for member [filename]
