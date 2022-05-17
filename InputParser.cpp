@@ -32,6 +32,11 @@ bool InputParser::readFile() {
     if (myfile.is_open()) {
         while (std::getline(myfile,line)) {
             std::cout << line << std::endl;
+            // call a new class here that will use this line variable
+            // tokenize string
+                // have it ouptut to terminal
+            // push into stack
+            // call method to do operations
         }
         myfile.close();
     }
