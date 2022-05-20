@@ -1,4 +1,6 @@
 #include "InputParser.h"
+#include <vector>
+#include <sstream>
 
 // constructor to set filename of the class
 // have unique syntax
@@ -31,12 +33,26 @@ bool InputParser::readFile() {
 
     if (myfile.is_open()) {
         while (std::getline(myfile,line)) {
-            std::cout << line << std::endl;
+            // std::cout << line << std::endl;
             // call a new class here that will use this line variable
             // tokenize string
                 // have it ouptut to terminal
             // push into stack
             // call method to do operations
+            
+            std::stringstream ss(line);
+
+            std::vector<std::string> tokens;
+            std::string temp_str;
+
+            //use space as delim for cutting string
+            while(std::getline(ss, temp_str)){
+                tokens.push_back(temp_str);
+            }
+            for(int i = 0; i < tokens.size(); i++) {
+                std::cout << tokens[i] << std::endl;
+   }
+
         }
         myfile.close();
     }
