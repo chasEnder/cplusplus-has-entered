@@ -46,13 +46,13 @@ bool InputParser::readFile() {
             std::string temp_str;
 
             //use space as delim for cutting string
-            std::cout << "just a test" << std::end1;
+            std::cout << "just a test" << std::endl;
             while(std::getline(ss, temp_str)){
                 tokens.push_back(temp_str);
             }
             for(int i = 0; i < tokens.size(); i++) {
                 std::cout << tokens[i] << std::endl;
-            std::cout << "just a test" << std::end1;
+            std::cout << "just a test" << std::endl;
 
    }
 
