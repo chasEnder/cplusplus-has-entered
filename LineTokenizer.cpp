@@ -22,7 +22,10 @@ class LineTokenizer
         std::string printToken()
         {
             std::istringstream iss(eachLine);
-            
+            std::copy(std::istream_iterator<std::string>(iss), std::istream_iterator<std::string>(), 
+            std::ostream_iterator<std::string>(std::cout, "\n"));
+
+            return eachLine;
         }
 
 };
