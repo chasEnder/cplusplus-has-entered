@@ -52,7 +52,7 @@ bool EquationEvaluator::isNum(std::string& token) {
  */
 bool EquationEvaluator::isOperator(std::string& token) {
 
-    return false;
+    return true;
 }
 
 /**
@@ -88,6 +88,8 @@ int EquationEvaluator::evaluate(std::string equation) {
                 case '^':
                     std::cout << "we power!" << std::endl;
                     break;
+                default:
+                    std::cout << "---------ERROR token not valid-------------" << std::endl;
             }
 
         } else {
