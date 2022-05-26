@@ -1,7 +1,9 @@
 #include "InputParser.h"
 #include <vector>
 #include <sstream>
-#include "LineTokenizer.cpp"
+// #include "LineTokenizer.cpp" 
+// leaving this for learning so you find that I renamed a class but you have to check references.
+// include the EquationEvaluator header file. never a cpp file in an include. bad practice
 
 // constructor to set filename of the class
 // have unique syntax
@@ -63,8 +65,8 @@ bool InputParser::readFile() {
             }
             */
 
-            LineTokenizer toks = LineTokenizer(line);
-            toks.printToken();
+            // LineTokenizer toks = LineTokenizer(line);
+            // toks.printToken();
         }
         myfile.close();
     }
@@ -76,3 +78,13 @@ bool InputParser::readFile() {
 
     return false;
 }
+
+
+/**
+ * @brief 
+ * 
+ * so the new thing that will happen within this file with the comments I made. You will instantiate a EquationEvaluator
+ * and then within your forloop you will call evaluate() on each 'line' or 'equation'. the return of that will soon have
+ * the result of our equation or null if it was invalid - in which case we should print an error message
+ * 
+ */
