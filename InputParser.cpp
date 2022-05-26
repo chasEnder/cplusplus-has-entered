@@ -1,6 +1,7 @@
 #include "InputParser.h"
-#include <vector>
-#include <sstream>
+// #include <vector> // dont use vector or other libraries
+
+
 // #include "LineTokenizer.cpp" 
 // leaving this for learning so you find that I renamed a class but you have to check references.
 // include the EquationEvaluator header file. never a cpp file in an include. bad practice
@@ -33,6 +34,9 @@ bool InputParser::readFile() {
     std::ifstream myfile(fileName); // might be wrong
     
     std::string line;
+
+    // new stuff from cwk
+    EquationEvaluator evalulator;
 
     if (myfile.is_open()) {
         while (std::getline(myfile,line)) {
@@ -67,6 +71,8 @@ bool InputParser::readFile() {
 
             // LineTokenizer toks = LineTokenizer(line);
             // toks.printToken();
+            evalulator.evaluate(line);
+
         }
         myfile.close();
     }

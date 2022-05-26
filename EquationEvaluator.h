@@ -2,6 +2,8 @@
 #define EQUATIONEVALUATOR_H
 
 #include <string>
+#include <iostream>
+#include <sstream>
 #include "Stack.h"
 
 class EquationEvaluator {

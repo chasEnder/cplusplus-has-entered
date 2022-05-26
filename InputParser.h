@@ -4,11 +4,9 @@
 
 #include <iostream>
 #include <fstream>
-//  Response: to be able to read/write files?
 #include <string>
-//  Response: allows for use of string object type
-
-// again try to understand each included library
+#include <sstream>
+#include "EquationEvaluator.h"
 
 class InputParser
 {

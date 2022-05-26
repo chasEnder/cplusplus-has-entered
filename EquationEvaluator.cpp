@@ -63,6 +63,38 @@ bool EquationEvaluator::isOperator(std::string& token) {
  */
 int EquationEvaluator::evaluate(std::string equation) {
     // this is where the logic will go to process a 'line' or 'equation'
+    std::stringstream equationStream(equation);
+    std::string token;
+
+    std::cout << "----------------------------------------" << std::endl;
+    std::cout << "Evaluating Equation" << std::endl;
+    std::cout << "----------------------------------------" << std::endl;
+
+    while (getline(equationStream, token, ' ')) {
+        if (isNum(token)) {
+            int temp = std::stoi( token ); // in the future this is where we will instantiate a SuperLongInt(token)
+            std::cout << "a number value: " << temp << std::endl;
+        } else if (isOperator(token)) {
+            switch (token[0]) {
+                case '+':
+                    std::cout << "we add!" << std::endl;
+                    break;
+                case '-':
+                    std::cout << "we sub!" << std::endl;
+                    break;
+                case '*':
+                    std::cout << "we multiply!" << std::endl;
+                    break;
+                case '^':
+                    std::cout << "we power!" << std::endl;
+                    break;
+            }
+
+        } else {
+            std::cout << "---------ERROR token not valid-------------" << std::endl;
+        }
+    }
+
     
     return 0;
 }
