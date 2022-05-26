@@ -6,7 +6,7 @@
 
 class EquationEvaluator {
 private:
-    Stack processingStack;
+    Stack<int> processingStack;
 
     //line seperating memebrs and methods for syntax and readability
     bool isNum(std::string& token);
@@ -14,7 +14,7 @@ private:
 
 public:
     // this is the method that we will call from InputParser to evaluate each line
-    int evaluateEquation(std::string equation); // the return type will change [int -> LargeNumber]
+    int evaluate(std::string equation); // the return type will change [int -> LargeNumber]
 };
 
 #endif

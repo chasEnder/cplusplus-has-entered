@@ -61,7 +61,7 @@ bool EquationEvaluator::isOperator(std::string& token) {
  * @param equation string that contains a equation to process
  * @return the result of the equation or a null pointer if the equation is invalid
  */
-int EquationEvaluator::evaluateEquation(std::string equation) {
+int EquationEvaluator::evaluate(std::string equation) {
     // this is where the logic will go to process a 'line' or 'equation'
     
     return 0;
